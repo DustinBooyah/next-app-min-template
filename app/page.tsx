@@ -1,3 +1,14 @@
+import { FaqSimple } from "./ui/faq/FaqSimple";
+import { FeaturesCards } from "./ui/features/FeaturesCards";
+import { HeroContentLeft } from "./ui/hero/HeroContentLeft";
+
 export default function HomePage() {
-  return <div>Home page</div>;
+  return (
+    <main>
+      <HeroContentLeft/>
+      <FeaturesCards/>
+      <FaqSimple/>
+    </main>
+  
+  );
 }
