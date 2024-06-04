@@ -10,7 +10,7 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container} size="md">
-        <Title className={classes.title}>Maine COE</Title>
+        <Title className={classes.title}>Hero</Title>
         <Text className={classes.description} size="xl" mt="xl">
           Build fully functional accessible web applications faster than ever – Mantine includes
           more than 120 customizable components and hooks to cover you in any situation
