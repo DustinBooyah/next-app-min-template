@@ -10,14 +10,14 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container} size="md">
-        <Title className={classes.title}>A fully featured React components library</Title>
+        <Title className={classes.title}>Maine COE</Title>
         <Text className={classes.description} size="xl" mt="xl">
           Build fully functional accessible web applications faster than ever – Mantine includes
           more than 120 customizable components and hooks to cover you in any situation
         </Text>
 
         <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-          Get started
+          Log In
         </Button>
       </Container>
     </div>
