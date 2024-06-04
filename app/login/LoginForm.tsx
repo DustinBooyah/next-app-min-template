@@ -10,13 +10,13 @@ import {
     Group,
     Button,
   } from '@mantine/core';
-  import classes from './AuthenticationTitle.module.css';
+  import classes from './LoginForm.module.css';
   import Link from 'next/link';
-  export function AuthenticationTitle() {
+  export function LoginForm() {
     return (
       <Container size={420} my={40}>
         <Title ta="center" className={classes.title}>
-          Welcome back!
+          Sup.
         </Title>
         <Text c="dimmed" size="sm" ta="center" mt={5}>
           Do not have an account yet?{' '}

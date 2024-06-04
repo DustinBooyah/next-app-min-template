@@ -1,3 +1,4 @@
+"use client";
 import { useState } from 'react';
 import { Group, Code } from '@mantine/core';
 import {

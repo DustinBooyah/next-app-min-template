@@ -1,7 +1,7 @@
-import { AuthenticationTitle } from "./AuthenticationTitle/AuthenticationTitle";
+import { LoginForm } from "./LoginForm";
 
 export default function LoginPage() {
   return (
-    <AuthenticationTitle/>
+    <LoginForm/>
   );
 }
