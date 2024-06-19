@@ -17,20 +17,20 @@ export default function UserInfo() {
           </Text>
 
           <Text fz="lg" fw={500} className={classes.name}>
-            Robert Glassbreaker
+            Dustin Aguilar
           </Text>
 
           <Group wrap="nowrap" gap={10} mt={3}>
             <IconAt stroke={1.5} size="1rem" className={classes.icon} />
             <Text fz="xs" c="dimmed">
-              robert@glassbreaker.io
+              dustin@dustinaguilar.com
             </Text>
           </Group>
 
           <Group wrap="nowrap" gap={10} mt={5}>
             <IconPhoneCall stroke={1.5} size="1rem" className={classes.icon} />
             <Text fz="xs" c="dimmed">
-              +11 (876) 890 56 23
+              +11 (352) 890 56 23
             </Text>
           </Group>
         </div>

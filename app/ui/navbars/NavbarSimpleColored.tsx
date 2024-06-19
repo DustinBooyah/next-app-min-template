@@ -16,12 +16,12 @@ import {
 import classes from './NavbarSimpleColored.module.css';
 
 const data = [
-  { link: '', label: 'Notifications', icon: IconBellRinging },
-  { link: '', label: 'Billing', icon: IconReceipt2 },
-  { link: '', label: 'Security', icon: IconFingerprint },
-  { link: '', label: 'SSH Keys', icon: IconKey },
-  { link: '', label: 'Databases', icon: IconDatabaseImport },
-  { link: '', label: 'Authentication', icon: Icon2fa },
+  { link: '', label: 'Training', icon: IconBellRinging },
+  { link: '', label: 'Assistance', icon: IconReceipt2 },
+  { link: '', label: 'Profile', icon: IconFingerprint },
+  { link: '', label: 'Certificates', icon: IconKey },
+  // { link: '', label: 'Databases', icon: IconDatabaseImport },
+  // { link: '', label: 'Authentication', icon: Icon2fa },
   { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 

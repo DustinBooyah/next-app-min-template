@@ -4,8 +4,8 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Maine COE",
-  description: "Maine COE Front End - First draft",
+  title: "Dashboard Mantine",
+  description: "Mantine Dashboard - First draft",
 };
 
 export default function RootLayout({ children }: { children: any }) {
