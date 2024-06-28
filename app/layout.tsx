@@ -1,7 +1,11 @@
 import "@mantine/core/styles.css";
 import React from "react";
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
-import { theme } from "../theme";
+import { createTheme, MantineProvider, ColorSchemeScript } from "@mantine/core";
+// import { theme } from "../theme";
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
 
 export const metadata = {
   title: "Dashboard Mantine",

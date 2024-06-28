@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState } from 'react';
 import { Group, Code } from '@mantine/core';
 import {
@@ -13,11 +13,11 @@ import {
   IconLogout,
 } from '@tabler/icons-react';
 // import { MantineLogo } from '@mantinex/mantine-logo';
-import classes from './NavbarSimpleColored.module.css';
+import classes from './NavbarSimple.module.css';
 
 const data = [
   { link: '', label: 'Training', icon: IconBellRinging },
-  { link: '', label: 'Assistance', icon: IconReceipt2 },
+  { link: '', label: 'Technical Assistance', icon: IconReceipt2 },
   { link: '', label: 'Profile', icon: IconFingerprint },
   { link: '', label: 'Certificates', icon: IconKey },
   // { link: '', label: 'Databases', icon: IconDatabaseImport },
@@ -25,7 +25,7 @@ const data = [
   { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 
-export function NavbarSimpleColored() {
+export function NavbarSimple() {
   const [active, setActive] = useState('Billing');
 
   const links = data.map((item) => (
@@ -48,10 +48,8 @@ export function NavbarSimpleColored() {
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Group className={classes.header} justify="space-between">
-          {/* <MantineLogo size={28} inverted style={{ color: 'white' }} /> */}
-          <Code fw={700} className={classes.version}>
-            v3.1.2
-          </Code>
+          {/* <MantineLogo size={28} /> */}
+          <Code fw={700}>v3.1.2</Code>
         </Group>
         {links}
       </div>
