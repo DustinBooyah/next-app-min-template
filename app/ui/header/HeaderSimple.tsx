@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Container, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-// import { MantineLogo } from '@mantinex/mantine-logo';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderSimple.module.css';
 
 const links = [
@@ -35,7 +35,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
+        <MantineLogo size={28} />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

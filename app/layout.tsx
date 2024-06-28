@@ -1,6 +1,9 @@
 import "@mantine/core/styles.css";
 import React from "react";
-import { createTheme, MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { createTheme, MantineProvider, ColorSchemeScript, DirectionProvider } from "@mantine/core";
+import { ModalsProvider } from '@mantine/modals';
+import { Notifications } from '@mantine/notifications';
+
 // import { theme } from "../theme";
 
 const theme = createTheme({
@@ -24,7 +27,14 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+      <DirectionProvider>
+					<MantineProvider theme={theme}>
+						<ModalsProvider>
+							{children}
+						</ModalsProvider>
+						<Notifications />
+					</MantineProvider>
+				</DirectionProvider>
       </body>
     </html>
   );

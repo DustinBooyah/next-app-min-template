@@ -2,8 +2,6 @@
 // import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 // import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
-import { CardsSkeleton, RevenueChartSkeleton, LatestInvoicesSkeleton } from '../skeletons';
-import UserInfo from '../../components/UserInfo/UserInfo';
 
 export default async function Page() {
   // const revenue = await fetchRevenue();
@@ -17,10 +15,10 @@ export default async function Page() {
   return (
     <main>
       <h1 className={`mb-4 text-xl md:text-2xl`}>
-        Dashboard
+        Yo
       </h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <Suspense fallback={<CardsSkeleton />}>
+      <Suspense>
           {/* <CardWrapper /> */}
           
         </Suspense>
@@ -36,10 +34,10 @@ export default async function Page() {
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         {/* <RevenueChart revenue={revenue}  /> */}
-        <Suspense fallback={<RevenueChartSkeleton />}>
+        <Suspense>
           {/* <RevenueChart /> */}
         </Suspense>
-        <Suspense fallback={<LatestInvoicesSkeleton />}>
+        <Suspense>
           {/* <LatestInvoices /> */}
         </Suspense>
       </div>

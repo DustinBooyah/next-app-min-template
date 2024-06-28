@@ -1,73 +1,44 @@
 'use client';
-import { NavbarSimple } from "../ui/navbars/NavbarSimple";
-// import { HeaderSimple } from "../ui/header/HeaderSimple";
-// import { TableSort } from "./users/TableSort";
-// import { TableReviews } from "./users/TableReviews";
-import { AppShell, Container, rem, useMantineTheme, Burger } from '@mantine/core';
-// import { MantineLogo } from '@mantinex/mantine-logo';
-import { ReactNode, useState } from 'react';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import  AppMain  from '../components/AppMain/AppMain';
-import  HeaderNav  from '../components/HeaderNav/HeaderNav';
-import  FooterNav  from '../components/FooterNav/FooterNav';
 
-type Props = {
-  children: ReactNode;
-};
+import { AppShell, Burger, Text, useMantineColorScheme, useMantineTheme } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { AdminHeader } from '../components/Headers/AdminHeader';
+import { NavbarSimple } from '../ui/navbars/NavbarSimple'
+// import { navLinks } from '../config';
 
-function Layout({ children }: Props) {
-  const theme = useMantineTheme();
-  const tablet_match = useMediaQuery('(max-width: 768px)');
-  const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
-  const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
-
-  return (
-    <AppShell
-      layout="alt"
-      header={{ height: 60 }}
-      footer={{ height: 60 }}
-      navbar={{
-        width: 300,
-        breakpoint: 'md',
-        collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
-      }}
-      padding={0}
-    >
-      <AppShell.Header
-        style={{
-          height: rem(60),
-          border: 'none',
-          boxShadow: tablet_match ? theme.shadows.md : theme.shadows.sm,
-        }}
-      >
-        <Container fluid py="sm" px="lg">
-          <HeaderNav
-            desktopOpened={desktopOpened}
-            mobileOpened={mobileOpened}
-            toggleDesktop={toggleDesktop}
-            toggleMobile={toggleMobile}
-          />
-        </Container>
-      </AppShell.Header>
-      <AppShell.Navbar>
-        {/* <NavbarSimple onClose={toggleMobile} /> */}
-        <NavbarSimple  />
-        {/* <HeaderSimple/> */}
-      </AppShell.Navbar>
-      <AppShell.Main>
-        <AppMain>{children}</AppMain>
-        {/* <TableReviews/> */}
-      </AppShell.Main>
-      <AppShell.Footer p="md">
-        <Container fluid px="lg">
-          <FooterNav />
-        </Container>
-      </AppShell.Footer>
-    </AppShell>
-  );
+interface Props {
+	children: React.ReactNode;
 }
 
-export default Layout;
+export default function DashboardLayout({ children }: Props) {
+	const [opened, { toggle }] = useDisclosure();
+	const { colorScheme } = useMantineColorScheme();
+	const theme = useMantineTheme();
 
+	const bg = colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0];
 
-    
+	return (
+		<AppShell
+			header={{ height: 60 }}
+			navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+			padding="md"
+			transitionDuration={500}
+			transitionTimingFunction="ease"
+		>
+			<AppShell.Navbar>
+				<NavbarSimple />
+			</AppShell.Navbar>
+			<AppShell.Header>
+				<AdminHeader
+					burger={<Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" mr="xl" />}
+				/>
+			</AppShell.Header>
+			<AppShell.Main bg={bg}>{children}</AppShell.Main>
+			<AppShell.Footer>
+				<Text w="full" size="sm" c="gray">
+					CopyRight © 2024 DA
+				</Text>
+			</AppShell.Footer>
+		</AppShell>
+	);
+}
