@@ -6,6 +6,7 @@ import { IconSearch, IconSettings } from '@tabler/icons-react';
 import classes from './AdminHeader.module.css';
 import { DirectionSwitcher } from '../DirectionSwitcher/DirectionSwitcher';
 // import { Logo } from '../Logo/Logo';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 
 interface Props {
@@ -19,6 +20,8 @@ export function AdminHeader({ burger }: Props) {
 		<header className={classes.header}>
 			{burger && burger}
 			{/* <Logo /> */}
+			<MantineLogo size={28} />
+
 			<Box style={{ flex: 1 }} />
 			<TextInput
 				placeholder="Search"

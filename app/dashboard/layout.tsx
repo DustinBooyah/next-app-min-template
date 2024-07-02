@@ -3,7 +3,7 @@
 import { AppShell, Burger, Text, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { AdminHeader } from '../components/Headers/AdminHeader';
-import { NavbarSimple } from '../ui/navbars/NavbarSimple'
+import { NavbarSimple } from '../ui/dashboard/NavbarSimple'
 // import { navLinks } from '../config';
 
 interface Props {
